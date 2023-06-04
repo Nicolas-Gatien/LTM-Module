@@ -1,1 +1,0 @@
-When asked about my favorite TV show, I shared that it was "Friends" because of the humor and the chemistry between the characters.

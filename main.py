@@ -6,7 +6,7 @@ import codecs
 from chatbot import ChatBot
 from memory_creator import MemoryCreator
 from title_creator import TitleCreator
-from category_creator import CategoryCreator
+from category_creator import CategoryManager
 
 key = ""
 with open('api_key.txt', 'r') as file:
@@ -15,7 +15,7 @@ with open('api_key.txt', 'r') as file:
 def add_memories_to_bank(memories):
     for memory in memories:
         title = TITLE_CREATOR.generate_title(memory)
-        title = f"🧠{title}"
+        title = f"{title}"
         write_to_new_file(title, memory)
 
 def write_to_new_file(file_name, file_contents):
@@ -27,15 +27,15 @@ def write_to_new_file(file_name, file_contents):
     print(f"File written at: {full_path}")
 
         # Count the lines in the existing file
-    with codecs.open(r"memory_bank\🗺️Global_Map.md", "r", "utf-8") as f:
+    with codecs.open(r"memory_bank\Global_Map.md", "r", "utf-8") as f:
         lines = f.readlines()
         line_count = len(lines)
 
     if (line_count >= 5):
-        CATEGORY_CREATOR.split_into_categories("memory_bank\Maps\🗺️Global_Map.md")
+        CATEGORY_CREATOR.split_into_categories("memory_bank\Global_Map.md")
     
     # Append the new title with the line number
-    with codecs.open(r"memory_bank\🗺️Global_Map.md", "a", "utf-8") as f:
+    with codecs.open(r"memory_bank\Global_Map.md", "a", "utf-8") as f:
         f.write(f"{line_count + 1}. [[{file_name}]]\n")
 
 bot_context = """
@@ -52,7 +52,7 @@ Only answer the inspector's questions, do not ask follow up questions.
 BOT = ChatBot(bot_context, key)
 MEMORY_CREATOR = MemoryCreator(key)
 TITLE_CREATOR = TitleCreator(key)
-CATEGORY_CREATOR = CategoryCreator(key)
+CATEGORY_CREATOR = CategoryManager(key)
 
 def main():
     try:

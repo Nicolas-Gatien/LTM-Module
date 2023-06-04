@@ -1,1 +1,0 @@
-I shared my plans for tomorrow, which included going for a morning jog, having lunch with friends, and watching a movie or reading a book to relax in the evening.

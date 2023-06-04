@@ -3,7 +3,7 @@ import re
 
 from chatbot import ChatBot
 
-class CategoryCreator():
+class CategoryManager():
     def __init__(self, api_key):
         self.key= api_key
 
@@ -35,7 +35,7 @@ class CategoryCreator():
     def get_list_of_memory_paths_based_on_names(self, memories):
         paths = []
         for memory in memories:
-            path = memory + ".md"
+            path = "memory_bank/" + memory + ".md"
             paths.append(path)
 
         return paths
@@ -52,14 +52,12 @@ class CategoryCreator():
     
     def generate_prompt(self, source_name, source_contents, memory_names, memories):
         memories_string = ""
-        for i in enumerate(memory_names):
-            memories_string += f"{memory_names[i]}:\n"
+        for i, memory_name in enumerate(memory_names):
+            memories_string += f"{memory_name}:\n"
             memories_string += memories[i]
 
-        f"""
+        prompt = f"""
         This is a file named {source_name} which contains a list of {len(memory_names)} items which are either memories or categories.
-        A memory's title begins with: 🧠
-        A category's title begins with: 🗺️
         <<<
         {source_contents}
         >>>
@@ -76,25 +74,9 @@ class CategoryCreator():
         1. [[memory 1]]
         2. [[Memory 2]]
         ```
-
-        Here is an example response:
-        ```md
-        # Nature Experiences
-        1. [[🧠 First Glimpse of Grand Canyon]]
-        2. [[🧠 Witnessing My First Snowfall]]
-        3. [[🧠 First Solo Drive Along the Coastline]]
-        ```
-        ```md
-        # Personal Milestones
-        1. [[🧠 Completing My First Marathon]]
-        2. [[🧠 First Solo Drive Along the Coastline]]
-        ```
-        ```md
-        # Solo Travels
-        1. [[🧠 Solo Journey Through Japan]]
-        2. [[🧠 First Solo Drive Along the Coastline]]
-        ```
         """
+
+        return prompt
 
     def extract_code_blocks_from_response(self, response):
         # Regex pattern for code blocks
@@ -169,13 +151,13 @@ class CategoryCreator():
             f.writelines(lines)
 
     def create_category_files(self, category_titles, category_contents):
-        for i in enumerate(category_titles):
-            self.create_markdown_file(category_titles[i], category_contents[i])
+        for i, category_title in enumerate(category_titles):
+            self.create_markdown_file(category_title, category_contents[i])
 
     def format_categories_for_source_file(self, category_names):
         formatted_string = ""
         for i, s in enumerate(category_names, 1):
-            formatted_string += f"{i}. [[🗺️{s}]]\n"
+            formatted_string += f"{i}. [[{s}]]\n"
         return formatted_string
 
     def override_source(self, source_path, content):
@@ -200,13 +182,14 @@ class CategoryCreator():
         prompt = self.generate_prompt(source_name, source_content, memory_names, memories)
         BOT = ChatBot("Your are a categorizer. Your job is to create relevant and cohesive categories.", self.key)
         response = BOT.get_response(prompt)
+        print(response)
 
         #✅ Extract Code Bloccks from Response
-        code_blocks = self.extract_code_blocks(response)
+        code_blocks = self.extract_code_blocks_from_response(response)
 
         #✅ Extract category titles
-        category_titles = self.get_category_titles(code_blocks)
-        category_contents = self.get_category_contents(code_blocks)
+        category_titles = self.get_category_titles_from_code_blocks(code_blocks)
+        category_contents = self.get_category_contents_from_code_blocks(code_blocks)
 
         #✅ Create category files
         self.create_category_files(category_titles, category_contents)

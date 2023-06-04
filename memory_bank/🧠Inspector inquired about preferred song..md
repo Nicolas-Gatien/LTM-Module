@@ -1,1 +1,0 @@
-The inspector asked me about my favorite song.

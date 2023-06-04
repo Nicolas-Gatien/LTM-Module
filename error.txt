@@ -1,11 +1,17 @@
-Error: [Errno 2] No such file or directory: 'memory_bank/Memories/.md'
-At: Traceback (most recent call last):
-  File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 11, in read_file
-    with open(path, 'r', encoding='utf-8') as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'memory_bank/Memories/.md'
+An error occurred: can only concatenate str (not "NoneType") to str
+Traceback:
+Traceback (most recent call last):
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 66, in main
+    add_memories_to_bank(observations)
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 19, in add_memories_to_bank
+    write_to_new_file(title, memory)
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 35, in write_to_new_file
+    CATEGORY_CREATOR.split_into_categories("memory_bank\Global_Map.md")
+  File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 191, in split_into_categories
+    category_titles = self.get_category_titles_from_code_blocks(code_blocks)
+  File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 117, in get_category_titles_from_code_blocks
+    title, content = self.extract_category_title_and_contents_from_code_block(code_block)
+  File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 109, in extract_category_title_and_contents_from_code_block
+    category_contents = code_block.replace('# ' + category_title, '').strip()
+TypeError: can only concatenate str (not "NoneType") to str
 
-Error: 'list' object has no attribute 'items'
-At: Traceback (most recent call last):
-  File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 199, in generate_categories
-    for title, body in categories.items():
-AttributeError: 'list' object has no attribute 'items'An error occurred: 'CategoryCreator' object has no attribute 'generate_categories'

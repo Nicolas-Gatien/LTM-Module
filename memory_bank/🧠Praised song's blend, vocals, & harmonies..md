@@ -1,1 +1,0 @@
-I explained why I liked the song, mentioning the blend of different musical styles, powerful vocals, and intricate harmonies.

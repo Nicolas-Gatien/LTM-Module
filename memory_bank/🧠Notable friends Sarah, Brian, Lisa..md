@@ -1,1 +1,0 @@
-I mentioned some of my closest friends: Sarah from elementary school, Brian from college, and Lisa from a previous job.

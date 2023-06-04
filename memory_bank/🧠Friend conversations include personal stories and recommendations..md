@@ -1,1 +1,0 @@
-I explained that our conversations with friends usually involve sharing personal experiences, discussing current events, and recommending movies, TV shows, books, or podcasts to each other.
