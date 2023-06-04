@@ -1,10 +1,14 @@
 import openai
 import traceback
+
 from chatbot import ChatBot
+from memory_creator import MemoryCreator
+from title_creator import TitleCreator
 
 key = ""
 with open('api_key.txt', 'r') as file:
     key = file.read().replace('\n', '')
+
 
 def main():
     try:
@@ -20,11 +24,15 @@ Only answer the inspector's questions, do not ask follow up questions.
 """
 
         BOT = ChatBot(bot_context, key)
-        
-        while True:
+        MEMORY_CREATOR = MemoryCreator(key)
+        loop = True
+        while loop:
             prompt = input("User: ")
             if (prompt == "done"):
-                print(BOT.get_conversation())
+                observations = MEMORY_CREATOR.generate_observations(BOT.get_conversation())
+                print(observations)
+                loop = False
+                prompt = input("")
             response = BOT.get_response(prompt)
             print(f"GPT-4: {response}")
 

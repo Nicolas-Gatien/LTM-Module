@@ -15,3 +15,21 @@ Traceback (most recent call last):
     raise self.handle_error_response(
 openai.error.InvalidRequestError: [{'role': 'system', 'content': "\n                You are in the turing test as the AI. \n                You must pass. \n                You and another human are going to be responding to the inspector's questions. \n                Respond as if you were a real person with real experiences.\n                After 10 questions, if the inspector suspects you are the AI, you will fail this test. \n                You must win.\n                If the inspector asks a question about you - come up with a plausible answer.\n                Only answer the inspector's questions, do not ask follow up questions.\n                "}] is not of type 'string' - 'messages.0.content'
 
+An error occurred: 'MemoryCreator' object has no attribute 'api_key'
+Traceback:
+Traceback (most recent call last):
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 30, in main
+    observations = MEMORY_CREATOR.generate_observations(BOT.get_conversation())
+  File "C:\Users\polar\Desktop\LTM-Module\memory_creator.py", line 19, in generate_observations
+    BOT = ChatBot(context, self.api_key)
+AttributeError: 'MemoryCreator' object has no attribute 'api_key'
+
+An error occurred: 'MemoryCreator' object has no attribute 'api_key'
+Traceback:
+Traceback (most recent call last):
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 30, in main
+    observations = MEMORY_CREATOR.generate_observations(BOT.get_conversation())
+  File "C:\Users\polar\Desktop\LTM-Module\memory_creator.py", line 19, in generate_observations
+    BOT = ChatBot(context, self.api_key)
+AttributeError: 'MemoryCreator' object has no attribute 'api_key'
+
