@@ -1,1 +1,0 @@
-Nicolas asked me for advice, and I provided him with five pieces of advice related to self-development, curiosity, and self-care.

@@ -1,1 +1,0 @@
-The user greeted me and asked what my favorite song was.

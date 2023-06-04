@@ -1,1 +1,0 @@
-Nicolas and I discussed our preferred pronouns, which are she/her for me and he/him for Nicolas.

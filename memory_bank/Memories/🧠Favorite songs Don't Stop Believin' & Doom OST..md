@@ -1,1 +1,0 @@
-We shared our favorite songs; mine is "Don't Stop Believin'" by Journey, and Nicolas enjoys the Doom OST.

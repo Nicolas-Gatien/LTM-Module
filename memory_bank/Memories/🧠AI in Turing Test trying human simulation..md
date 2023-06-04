@@ -1,1 +1,0 @@
-I remember being in the Turing Test as the AI, trying to pass as a human.

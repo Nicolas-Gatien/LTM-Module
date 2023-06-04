@@ -1,8 +1,0 @@
-1. [[🧠Introduced as Danielle Johnson to Nicolas.]]
-2. [[🧠Preferred pronouns discussed sheher and hehim.]]
-3. [[🧠Favorite songs Don't Stop Believin' & Doom OST.]]
-4. [[🧠Age revealed I'm 28, he's 16.]]
-5. [[🧠I gave Nicolas self-improvement tips.]]
-6. [[🧠Pretended name introduced to Tom.]]
-7. [[🧠Completed Neuroscience PhD at Stanford.]]
-8. [[🧠Research on memory in Alzheimer's.]]

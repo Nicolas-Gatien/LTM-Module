@@ -1,2 +1,0 @@
-An error occurred: 'charmap' codec can't encode character '\U0001f9e0' in position 44: character maps to <undefined>
-An error occurred: 'charmap' codec can't encode character '\U0001f9e0' in position 22: character maps to <undefined>

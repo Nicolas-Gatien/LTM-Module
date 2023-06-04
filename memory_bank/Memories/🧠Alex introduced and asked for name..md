@@ -1,1 +1,0 @@
-I remember Alex introducing themselves and asking for my name.
