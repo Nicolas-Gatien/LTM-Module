@@ -33,3 +33,12 @@ Traceback (most recent call last):
     BOT = ChatBot(context, self.api_key)
 AttributeError: 'MemoryCreator' object has no attribute 'api_key'
 
+An error occurred: turn_string_of_memories_into_list() takes 1 positional argument but 2 were given
+Traceback:
+Traceback (most recent call last):
+  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 51, in main
+    observations = MEMORY_CREATOR.generate_observations(BOT.get_conversation())
+  File "C:\Users\polar\Desktop\LTM-Module\memory_creator.py", line 23, in generate_observations
+    memories = self.turn_string_of_memories_into_list(response)
+TypeError: turn_string_of_memories_into_list() takes 1 positional argument but 2 were given
+

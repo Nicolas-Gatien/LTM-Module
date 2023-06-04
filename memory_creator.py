@@ -17,13 +17,20 @@ This is a transcript of a conversation:
 From the perspective of the assistant (use the first person), write as many memories as you see fit. They are not reflections, but accurate retelling of the events that occurred during the conversation. Like observations.
 
 Limit each memory to 1-3 sentences.
+
+Format your response as a list:
+1. Memory 1
+2. Memory 2
+3. Memory 3
+etc...
 """
         BOT = ChatBot(context, self.key)
         response = BOT.get_response(prompt)
+        print(response)
         memories = self.turn_string_of_memories_into_list(response)
         return memories
 
-    def turn_string_of_memories_into_list(input_string):
+    def turn_string_of_memories_into_list(self, input_string):
         lines = input_string.split('\n')
 
         memories = []
