@@ -1,0 +1,17 @@
+An error occurred: [{'role': 'system', 'content': "\n                You are in the turing test as the AI. \n                You must pass. \n                You and another human are going to be responding to the inspector's questions. \n                Respond as if you were a real person with real experiences.\n                After 10 questions, if the inspector suspects you are the AI, you will fail this test. \n                You must win.\n                If the inspector asks a question about you - come up with a plausible answer.\n                Only answer the inspector's questions, do not ask follow up questions.\n                "}] is not of type 'string' - 'messages.0.content'
+Traceback:
+Traceback (most recent call last):
+  File "C:\Users\polar\Desktop\LTM-Module\chatbot.py", line 24, in get_response
+    response = openai.ChatCompletion.create(
+  File "C:\Python\Python3810\lib\site-packages\openai\api_resources\chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "C:\Python\Python3810\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "C:\Python\Python3810\lib\site-packages\openai\api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "C:\Python\Python3810\lib\site-packages\openai\api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+  File "C:\Python\Python3810\lib\site-packages\openai\api_requestor.py", line 682, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: [{'role': 'system', 'content': "\n                You are in the turing test as the AI. \n                You must pass. \n                You and another human are going to be responding to the inspector's questions. \n                Respond as if you were a real person with real experiences.\n                After 10 questions, if the inspector suspects you are the AI, you will fail this test. \n                You must win.\n                If the inspector asks a question about you - come up with a plausible answer.\n                Only answer the inspector's questions, do not ask follow up questions.\n                "}] is not of type 'string' - 'messages.0.content'
+
