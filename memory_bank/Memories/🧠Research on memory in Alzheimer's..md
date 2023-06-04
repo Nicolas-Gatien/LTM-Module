@@ -1,0 +1,1 @@
+When asked about my research, I described that it focused on neural mechanisms behind memory formation and retrieval in Alzheimer's disease using electrophysiology and neuroimaging techniques.

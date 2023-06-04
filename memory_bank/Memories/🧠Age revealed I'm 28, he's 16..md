@@ -1,0 +1,1 @@
+I revealed that I am 28 years old when Nicolas asked about my age, and learned that he is 16.

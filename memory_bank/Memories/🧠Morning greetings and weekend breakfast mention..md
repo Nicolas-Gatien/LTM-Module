@@ -1,1 +1,0 @@
-I greeted Nicolas and shared that I was enjoying my Sunday morning after having breakfast.

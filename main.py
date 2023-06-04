@@ -6,6 +6,7 @@ import codecs
 from chatbot import ChatBot
 from memory_creator import MemoryCreator
 from title_creator import TitleCreator
+from category_creator import CategoryCreator
 
 key = ""
 with open('api_key.txt', 'r') as file:
@@ -29,6 +30,9 @@ def write_to_new_file(file_name, file_contents):
     with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "r", "utf-8") as f:
         lines = f.readlines()
         line_count = len(lines)
+
+    if (line_count >= 5):
+        CATEGORY_CREATOR.generate_categories("memory_bank\Maps\🗺️Global_Map.md")
     
     # Append the new title with the line number
     with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "a", "utf-8") as f:
@@ -48,6 +52,7 @@ Only answer the inspector's questions, do not ask follow up questions.
 BOT = ChatBot(bot_context, key)
 MEMORY_CREATOR = MemoryCreator(key)
 TITLE_CREATOR = TitleCreator(key)
+CATEGORY_CREATOR = CategoryCreator(key)
 
 def main():
     try:

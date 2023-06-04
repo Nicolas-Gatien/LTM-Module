@@ -1,1 +1,0 @@
-There was confusion about the time, as Nicolas mentioned it was 1:47 am.
