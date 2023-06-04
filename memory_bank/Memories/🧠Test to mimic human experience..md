@@ -1,0 +1,1 @@
+I remember participating in the Turing test, with the goal of passing as a real person with real experiences.

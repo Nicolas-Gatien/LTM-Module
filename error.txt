@@ -1,10 +1,2 @@
-An error occurred: turn_string_of_memories_into_list() takes 1 positional argument but 2 were given
-Traceback:
-Traceback (most recent call last):
-  File "C:\Users\polar\Desktop\LTM-Module\main.py", line 51, in main
-    observations = MEMORY_CREATOR.generate_observations(BOT.get_conversation())
-  File "C:\Users\polar\Desktop\LTM-Module\memory_creator.py", line 23, in generate_observations
-    memories = self.turn_string_of_memories_into_list(response)
-TypeError: turn_string_of_memories_into_list() takes 1 positional argument but 2 were given
-
-An error occurred: pull_memory_content() missing 1 required positional argument: 'path'
+An error occurred: 'charmap' codec can't encode character '\U0001f9e0' in position 44: character maps to <undefined>
+An error occurred: 'charmap' codec can't encode character '\U0001f9e0' in position 22: character maps to <undefined>
