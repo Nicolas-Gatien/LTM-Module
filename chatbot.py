@@ -45,3 +45,6 @@ class ChatBot:
                 error_file.write(f"An error occurred: {str(e)}\n")
                 error_file.write(f"Traceback:\n{error_message}\n")
             print(f"An error occurred and has been written to error.txt. Error: {str(e)}")
+    
+    def get_conversation(self):
+        return self.chat_history

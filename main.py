@@ -23,6 +23,8 @@ def main():
         
         while True:
             prompt = input("User: ")
+            if (prompt == "done"):
+                print(BOT.get_conversation())
             response = BOT.get_response(prompt)
             print(f"GPT-4: {response}")
 
