@@ -11,12 +11,8 @@
             "id": "58089054df1eab59",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Maps/🗺️Global_Map.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Maps/🗺️Global_Map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Maps/🗺️Global_Map.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Maps/🗺️Global_Map.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,8 +140,13 @@
   },
   "active": "58089054df1eab59",
   "lastOpenFiles": [
-    "Untitled.md",
     "Maps/🗺️Global_Map.md",
+    "Memories/🧠Nicolas liked Assistant; I thanked him..md",
+    "Memories/🧠Nicolas introduces himself, AI has no name..md",
+    "Memories/🧠Time zone confusion between speakers..md",
+    "Memories/🧠Time confusion at 147 am..md",
+    "Memories/🧠Morning greetings and weekend breakfast mention..md",
+    "Untitled.md",
     "Memories",
     "Maps"
   ]

@@ -1,0 +1,1 @@
+I mentioned that I was in the Eastern Time Zone (ET), but later realized there was an inconsistency with Nicolas' time, who is also in EST.

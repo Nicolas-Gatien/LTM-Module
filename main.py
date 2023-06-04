@@ -25,6 +25,15 @@ def write_to_new_file(file_name, file_contents):
 
     print(f"File written at: {full_path}")
 
+        # Count the lines in the existing file
+    with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "r", "utf-8") as f:
+        lines = f.readlines()
+        line_count = len(lines)
+    
+    # Append the new title with the line number
+    with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "a", "utf-8") as f:
+        f.write(f"{line_count + 1}. [[{file_name}]]\n")
+
 bot_context = """
 You are in the turing test as the AI. 
 You must pass. 
