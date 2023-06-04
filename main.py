@@ -19,7 +19,7 @@ def add_memories_to_bank(memories):
         write_to_new_file(title, memory)
 
 def write_to_new_file(file_name, file_contents):
-    full_path = os.path.join(r"memory_bank/Memories/", f"{file_name}.md")
+    full_path = os.path.join(r"memory_bank/", f"{file_name}.md")
 
     with codecs.open(full_path, "w", "utf-8") as f:
         f.write(file_contents)
@@ -27,7 +27,7 @@ def write_to_new_file(file_name, file_contents):
     print(f"File written at: {full_path}")
 
         # Count the lines in the existing file
-    with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "r", "utf-8") as f:
+    with codecs.open(r"memory_bank\🗺️Global_Map.md", "r", "utf-8") as f:
         lines = f.readlines()
         line_count = len(lines)
 
@@ -35,7 +35,7 @@ def write_to_new_file(file_name, file_contents):
         CATEGORY_CREATOR.generate_categories("memory_bank\Maps\🗺️Global_Map.md")
     
     # Append the new title with the line number
-    with codecs.open(r"memory_bank\Maps\🗺️Global_Map.md", "a", "utf-8") as f:
+    with codecs.open(r"memory_bank\🗺️Global_Map.md", "a", "utf-8") as f:
         f.write(f"{line_count + 1}. [[{file_name}]]\n")
 
 bot_context = """

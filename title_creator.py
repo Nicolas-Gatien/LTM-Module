@@ -15,6 +15,6 @@ class TitleCreator():
         return title
     
     def remove_unwanted_chars(self, s):
-        unwanted_chars = "*\"\\/<>:|?"
+        unwanted_chars = "*\"\\/<>:|?."
         table = str.maketrans('', '', unwanted_chars)
         return s.translate(table)
