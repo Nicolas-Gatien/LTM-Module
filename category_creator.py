@@ -196,7 +196,7 @@ Here is an example response:
             chatbot_response = self.chatbot_manager.get_chatbot_response(prompt)
             categories = self.parse_categories_from_response(chatbot_response)
 
-            for title, body in categories.items():
+            for title, body in categories:
                 self.file_handler.write_body_to_file(title, body)
 
             self.file_handler.write_headers_to_file(categories)
