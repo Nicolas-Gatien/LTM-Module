@@ -32,7 +32,7 @@ def write_to_new_file(file_name, file_contents):
         line_count = len(lines)
 
     if (line_count >= 5):
-        CATEGORY_CREATOR.generate_categories("memory_bank\Maps\🗺️Global_Map.md")
+        CATEGORY_CREATOR.split_into_categories("memory_bank\Maps\🗺️Global_Map.md")
     
     # Append the new title with the line number
     with codecs.open(r"memory_bank\🗺️Global_Map.md", "a", "utf-8") as f:

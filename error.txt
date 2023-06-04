@@ -8,4 +8,4 @@ Error: 'list' object has no attribute 'items'
 At: Traceback (most recent call last):
   File "C:\Users\polar\Desktop\LTM-Module\category_creator.py", line 199, in generate_categories
     for title, body in categories.items():
-AttributeError: 'list' object has no attribute 'items'
+AttributeError: 'list' object has no attribute 'items'An error occurred: 'CategoryCreator' object has no attribute 'generate_categories'
